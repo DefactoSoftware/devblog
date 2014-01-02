@@ -25,9 +25,18 @@ h1, h2, h3, h4, h5, h6 {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a {
+  color: #3887be;
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+a:visited {
+  color: #1E4763;
+}
 
 /*****************************************************************************/
 /*
@@ -63,6 +72,14 @@ a:visited { color: #a0a; }
   line-height: 1.5em;
 }
 
+.header {
+  margin-bottom: 3em;
+}
+
+.header p {
+  float: right;
+}
+
 .header a {
   font-weight: bold;
   text-decoration: none;
@@ -74,7 +91,7 @@ a:visited { color: #a0a; }
 }
 
 .title a {
-  color: #a00;
+  color: #6bb6a1;
 }
 
 .title a:hover {
@@ -105,10 +122,6 @@ a:visited { color: #a0a; }
 .footer .contact {
   float: left;
   margin-right: 3em;
-}
-
-.footer .contact a {
-  color: #8085C1;
 }
 
 .footer .rss {
