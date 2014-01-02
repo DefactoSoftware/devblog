@@ -1,8 +1,8 @@
 ---
-layout:     post
-title:      "New Dev Blog!"
-date:       2014-01-02 17:19:37
-author:     jurre
+layout: post
+title: "New Dev Blog!"
+date: 2014-01-02 17:19:37
+author: jurre
 categories: [blog, jekyll, new-year]
 ---
 
