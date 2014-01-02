@@ -1,3 +1,10 @@
 name: Defacto Dev Blog
 markdown: redcarpet
 pygments: true
+authors:
+  jurre:
+    name: Jurre Stender
+    gravatar: 0dff0f9ef3d64ea9bc03a755661886c9
+    email: j.stender@defacto.nl
+    twitter: jurretweet
+    github: jurre

@@ -2,11 +2,19 @@
 layout: default
 comments: true
 ---
+{% assign author = site.authors[page.author] %}
+
 <h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<div class="author">
+    <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
+    <p>
+      by <a href="{{ author.github }}">{{ author.name }}</a> <br />
+      {{ page.date | date_to_string }}
+    </p>
+</div>
 
 <div class="post">
-{{ content }}
+  {{ content }}
 </div>
 
 {{ if page.comments }}
@@ -14,11 +22,18 @@ comments: true
   <script type="text/javascript">
       var disqus_shortname = 'defactodev';
       (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript'; dsq.async = true;
           dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          (document.getElementsByTagName('head')[0] ||
+            document.getElementsByTagName('body')[0]).appendChild(dsq);
       })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+  <a href="http://disqus.com" class="dsq-brlink">
+    comments powered by <span class="logo-disqus">Disqus</span>
+  </a>
 {{ endif }}
