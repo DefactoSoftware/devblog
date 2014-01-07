@@ -7,6 +7,8 @@ Dependencies to run locally:
 - Ruby
 - Jekyll (`gem install jekyll`)
 
+To run locally: `jekyll serve`, add the -w flag to autocompile changes.
+
 It's built with [Jekyll][jekyll], to add a post:
 - `git clone git@github.com:DefactoSoftware/DefactoSoftware.Github.io.git`
 - `git checkout -b my-awesome-blogpost`
