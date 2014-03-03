@@ -50,7 +50,7 @@ chose is the same as the one Jason's team chose:
 >your UI without also changing the API. This was enforced in code review only.
 
 In my opinion this is the best approach when you split your frontend and backend
-however not everyone shares that opinion. In this blogpost i will cover why we
+however not everyone shares that opinion. In this blogpost I will cover why we
 believe that testing the apps seperatly and thus mocking the API requests is the
 way to go.
 
