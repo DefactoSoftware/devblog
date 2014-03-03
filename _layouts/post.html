@@ -12,7 +12,7 @@ comments: true
       {{ page.date | date_to_string }} <br />
       categories:
         {% for category in page.categories %}
-        <a href="{{category}}">{{category}}</a> 
+        <a href="{{site.url}}/{{category}}">{{category}}</a> 
         {% endfor %}
     </p>
 </div>
