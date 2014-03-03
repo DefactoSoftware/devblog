@@ -4,12 +4,16 @@ comments: true
 ---
 {% assign author = site.authors[page.author] %}
 
-<h2>{{ page.title }}</h2>
+<h1>{{ page.title }}</h2>
 <div class="author">
     <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
     <p>
       by <a href="{{ author.github }}">{{ author.name }}</a> <br />
-      {{ page.date | date_to_string }}
+      {{ page.date | date_to_string }} <br />
+      categories:
+        {% for category in page.categories %}
+        <a href="{{category}}">{{category}}</a> 
+        {% endfor %}
     </p>
 </div>
 
