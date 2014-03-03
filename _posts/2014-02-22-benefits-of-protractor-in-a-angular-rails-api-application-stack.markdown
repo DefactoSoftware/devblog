@@ -3,8 +3,57 @@ layout: post
 title: "Benefits of Protractor in a Angular+Rails API application stack"
 date: 2014-02-22 18:13:16
 author: alexander
-categories: []
+categories: [Angular,Rails]
 ---
+
+## AngularJs with a separate Rails API
+We just finished a Web application that facilitates in the process of 360
+feedback. During the development process we learned a lot about how to use
+Angular alongside a Rails API especially when it comes to testing.
+With this blog we want to share some of our insights.
+
+### Why we chose to split the Angular frontend from the Rails app.
+There were several reasons why we chose for the Angular + Rails API solution.
+
+1. We had some developers that were really familiar with Rails, and some
+   developers that were less familiar with Rails.
+2. We wanted to develop a Ios app aswell and not having to write a separate API
+   for the Ios app saves a lot of development time.
+3. Rails has a fast development time, is highely cachable and lends itself
+   really well for API's.
+
+By splitting the development of the frontend and the Rails backend we could
+distribute the work over two development teams and keep the application as a
+whole very extensible.
+
+### The downsides of our approach
+By splitting the application over different repositories you gain flexibility
+but that comes at a cost. <a href="https://twitter.com/drapergeek">Jason
+Draper</a> recently wrote an article about
+<a href="http://robots.thoughtbot.com/emberjs-with-a-separate-rails-api">
+EmberJs with a separate Rails API
+</a>
+In this article he says the following about his experience with a similar
+approach:
+>The other problem is that by having the applications in two seperate repos, you
+>can't easily have a full integration test. In order to do this you would need
+>to run both applications on the same machine simultaneously. You would also
+>need some way to make sure that both of the applications were on the same
+>revision for the test.
+
+We came to the same conclusion when we implemented E2E tests. the solution we
+chose is the same as the one Jason's team chose:
+
+>We decided to test the apps seperately and trust that the API is what we've
+>said it was. This can be frustrating but in our case, it didn't turn out to be
+>a real problem. Once you have wired your API to the UI, you should never change
+>your UI without also changing the API. This was enforced in code review only.
+
+In my opinion this is the best approach when you split your frontend and backend
+however not everyone shares that opinion. In this blogpost i will cover why we
+believe that testing the apps seperatly and thus mocking the API requests is the
+way to go.
+
 ## why mocking API requests in E2E test is OKAY and dummy endpoints in the backend are NOT.
 It is common belief that end to end (E2E) tests should cover the whole application stack. In other words only covering the frontend aspects of the
 application and mocking the backend is evil and you shouldn't do it.
@@ -24,7 +73,7 @@ I came across several forum/blog/github posts that looked like this:
 >Inside the integration test I'm using this endpoint to load fixtures in order to ensure that each test has the same initial state.
 
 So the opinion from this developer is that instead of mocking the backend/API requests you should aim to set a initial state of a test database.
-Although this is a valid solution it has allot of downsides.
+Although this is a valid solution it has a lot of downsides.
 
 1. Setting the initial state of a test database requires a lot of database configuration.
 2. The state of the database has to be reset to different states depending on the behaviour and page you want to test.
