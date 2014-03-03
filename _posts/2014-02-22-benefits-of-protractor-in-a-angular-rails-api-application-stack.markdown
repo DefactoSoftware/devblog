@@ -33,7 +33,7 @@ Draper</a> recently wrote an article about
 <a href="http://robots.thoughtbot.com/emberjs-with-a-separate-rails-api">
 EmberJs with a separate Rails API
 </a>
-In this article he says the following about his experience with a similar
+In this article he writes the following about his experience with a similar
 approach:
 >The other problem is that by having the applications in two seperate repos, you
 >can't easily have a full integration test. In order to do this you would need
