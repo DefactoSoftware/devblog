@@ -1,39 +1,43 @@
----
-layout: default
-comments: true
----
+--- 
+layout: default 
+comments: true 
+--- 
 {% assign author = site.authors[page.author] %}
 
 <h2>{{ page.title }}</h2>
 <div class="author">
     <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
-    <p>
-      by <a href="{{ author.github }}">{{ author.name }}</a> <br />
-      {{ page.date | date_to_string }}
+    <p style="margin-left:50px;">
+        by <a href={% if author.github %}"http://github.com/{{ author.github }}" {% else %} "http://github.com/DefactoSoftware" {% endif %}>{{ author.name }}</a> on <a>{{ page.date | date_to_string }}</a>
+        <br />
+        {% if author.twitter %} Twitter: <a href="https://twitter.com/#!/{{ author.twitter }}">@{{ author.twitter }}</a> <br />{% endif %}
+        {% if author.email%} Email: <a href="mailto:{{ author.email }}">{{ author.email }}</a>{% endif %}
+        <br />
     </p>
 </div>
 
 <div class="post">
-  {{ content }}
+    {{ content }}
 </div>
 
 {{ if page.comments }}
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      var disqus_shortname = 'defactodev';
-      (function() {
-          var dsq = document.createElement('script');
-          dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] ||
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'defactodev';
+    (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] ||
             document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-  <noscript>
+    })();
+</script>
+<noscript>
     Please enable JavaScript to view the
     <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-    </noscript>
-  <a href="http://disqus.com" class="dsq-brlink">
+</noscript>
+<a href="http://disqus.com" class="dsq-brlink">
     comments powered by <span class="logo-disqus">Disqus</span>
   </a>
 {{ endif }}
