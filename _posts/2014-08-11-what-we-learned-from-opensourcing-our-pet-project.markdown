@@ -12,7 +12,7 @@ Our guiding principles while developing Hours were:
 
 * It should be extremely easy to make entries.
 * There should be as little limitations as possible (stuff like: only managers can create projects and assign users to projects, etc.).
-* Everyone should be able to signal how projects are going, or which a colleagues have disappeared down the rabbit-hole.
+* Everyone should be able to signal how projects are going, or which colleagues have disappeared down the rabbit-hole.
 * We won't mindlessly add features just because people are used to something.
 
 
