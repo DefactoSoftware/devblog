@@ -1,6 +1,6 @@
 name: Defacto Engineering
 markdown: redcarpet
-pygments: true
+highlighter: true
 authors:
   jurre:
     name: Jurre Stender
@@ -20,3 +20,10 @@ authors:
     email: m.jacobs@defacto.nl
     twitter:
     github: tarzan
+  hugo:
+    name: Hugo Veeger
+    gravatar: b3164f7cd48eac83bc74ae2dc73f7af6
+    email: hugo@defacto.nl
+    twitter:
+    github: dkhgh
+
