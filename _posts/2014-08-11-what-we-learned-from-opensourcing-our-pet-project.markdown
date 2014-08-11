@@ -32,7 +32,7 @@ After using Hours internally for a while, we decided it would be cool to clean i
 
 4. __Documentation is key__. We thought we were pretty anal about our documentation, but as soon as we made our repository public we realized (and heard) we forgot to add one or two key facts to the readme and docs. Ouch.
 
-5. __Someone had an [awesome internship]({{ site.url }}/images/intern.png)) at our company in 1991__.
+5. __Someone had an [awesome internship]({{ site.url }}/images/intern.png) at our company in 1991__.
 
 All in all, our experience was very positive. Should we think about opensource all our projects?
 
