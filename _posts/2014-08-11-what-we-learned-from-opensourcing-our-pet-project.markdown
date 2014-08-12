@@ -34,6 +34,6 @@ After using Hours internally for a while, we decided it would be cool to clean i
 
 5. __Someone had an [awesome internship]({{ site.url }}/images/intern.png) at our company in 1991__.
 
-All in all, our experience was very positive. Should we think about opensource all our projects?
+All in all, our experience was very positive. Should we open source all our projects?
 
 And what would that mean with regard to having a sustainable business?
