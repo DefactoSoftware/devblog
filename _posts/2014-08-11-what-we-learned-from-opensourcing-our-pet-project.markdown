@@ -19,7 +19,7 @@ Our guiding principles while developing Hours were:
 <img src="http://i.imgur.com/L6cCxPd.png" width=500 alt="Projects overview" />
 > We've been using _Hours_ internally for a couple of months now.
 
-After using Hours internally for a while, we decided it would be cool to clean it up a little and [make it available](https://happyhours.io) for others - both the source as a hosted version (free for small teams).
+After using Hours internally for a while, we decided it would be cool to clean it up a little and [make it available](https://happyhours.io) for others - both the source and a hosted version (free for small teams).
 
 # So here's what we learned
 --
