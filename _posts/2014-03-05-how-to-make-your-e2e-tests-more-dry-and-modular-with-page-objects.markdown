@@ -16,7 +16,7 @@ elements.
 Most of the things your doing in your integration tests like selecting
 a DOM element or clicking a button basically everything that goes prior to the
 expectation/evaluation is moved to a pageObject.
- 
+
 #### things you would put in a pageObject:
 - element selectors: `element(by.selector)`
 - element manipulations: `element(by.selector).click()`
@@ -64,7 +64,7 @@ module.exports = pageObjectName;
 ## How to add a pageObject to your integration test.
 Adding a pageObject to your integration test is done in two steps.
 
-1. importing the pageObject.
+1. Importing the pageObject.
 2. Creating a new instance of the pageObject (necessary because its a JavaScript
 class)
 
@@ -131,8 +131,8 @@ describe('E2E: awesome integration test', function () {
 
 ```
 As you can see I repeated some concepts discussed earlier like importing the
-pageObject and instantiating it. i also show some examples as to how to access
-various methods and elements inside the pageObject.
+pageObject and instantiating it. Here are some other examples as to how to
+access various methods and elements inside the pageObject.
 
 #### adding a mock Module contained in a pageObject
 ```javascript
