@@ -20,9 +20,30 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+  margin: 1em 0em 1em 0em;
+}
 
-h1 { margin-bottom: 1em; }
+h1 {
+    font-size:175%;
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+h3 {
+    font-size: 125%;
+}
+
+h1, h2, h3 {
+    line-height: 36px;
+}
+
+h4, h5, h6 {
+    font-size: 100%;
+}
+
 p { margin: 1em 0; }
 
 a {
